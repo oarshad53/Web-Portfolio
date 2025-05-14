@@ -1,4 +1,5 @@
 'use client';
+{/* Huge Headache of a Component, Do Not Use*/}
 import { useState } from 'react';
 
 export default function DropdownButton ({ className, children }) {
@@ -11,13 +12,13 @@ export default function DropdownButton ({ className, children }) {
 
     return (
         <div>
-            <button onClick = { orientationChanger } className={`w-10 h-10 rounded-full hover:bg-gray-300 flex items-center justify-center ${className}`}> {/* Make this a circle */}
+            <button onClick = { orientationChanger } className={`w-10 h-10 rounded-full hover:bg-gray-300 flex items-center justify-center ${className}`}>
                 <img src = "/icons/dropdown.svg"
                 className = {`max-w-[90%] max-h-[90%] object-contain transition-transform duration-300 ${isActive ? "rotate-360" : "rotate-270 ml-1"}`}/>
             </button>
 
             {isActive ? (
-            <div className="absolute left-99 right-102.5 mt-5 p-3 bg-gray-50 rounded-lg shadow-md z-10 min-w-[200px]">
+            <div className="mt-2 p-3 bg-gray-50 rounded-lg shadow-md">
                 <ul className = "list-disc pl-5">
                     {children.map((course, index) => {
                         return <li className = "font-outfit text-lg" key={index}>{course}</li>

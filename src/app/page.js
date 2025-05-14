@@ -1,7 +1,7 @@
 import Header from "@/components/header.js";
 import Typewriter from "@/components/typewriter.js"
 import HoverButton from "@/components/hoverbutton.js"
-import DropdownButton from "@/components/dropdownbutton.js";
+import ProjectButton from "@/components/projectbutton.js";
 
 // Notes on Tailwind
 // pt-25 means top padding, pb-0 means bottom padding
@@ -40,7 +40,7 @@ export default function Home() {
             <Typewriter className = "text-5xl font-bold font-outfit pt-25 pb-0">Omar Arshad</Typewriter>
             <p className = "font-outfit text-lg pt-10 pb-0">{welcomeParagraph}</p>
 
-            <Header className = "text-3xl font-bold font-outfit pt-10 pb-10">Skills and Technologies</Header>
+            <Header className = "text-3xl font-bold font-outfit pt-10 pb-5">Skills and Technologies</Header>
 
             <div className = "grid grid-cols-3 gap-6">
                 
@@ -54,15 +54,26 @@ export default function Home() {
                 </HoverButton>
 
             )}
-            
-            </div>
-            <div className="flex items-center gap-1 pt-10 pb-0">
-                <div className="text-3xl font-bold font-outfit">
-                    <Header>Relevant Courses</Header>
-                </div>
-                <DropdownButton className = "mt-1">{courses}</DropdownButton>
             </div>
 
+            <div>
+                <Header className = "text-3xl font-bold font-outfit pt-10 pb-5">Projects</Header>
+                <ProjectButton 
+                iconPath = "/icons/roblox.png" 
+                text = "Game on ROBLOX Platform"
+                textClassName = "text-2x1 font-bold font-outfit text-black"
+                href = "/projects/roblox-game/page.js">
+                </ProjectButton>
+            </div>
+
+            <Header className = "text-3xl font-bold font-outfit pt-10 pb-2">Relevant Courses</Header>
+            <div className="mt-2 p-5 bg-white/30 backdrop-blur-md rounded-xl shadow-lg">
+                <ul className = "list-disc pl-5 space-y-1">
+                    {courses.map((course, index) => {
+                        return <li className = "font-outfit text-lg" key={index}>{course}</li>
+                    })}
+                </ul>
+            </div>
 
         </div>
     )
