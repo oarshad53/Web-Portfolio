@@ -62,8 +62,17 @@ export default function Home() {
                 iconPath = "/icons/roblox.png" 
                 text = "Game on ROBLOX Platform"
                 textClassName = "text-2x1 font-bold font-outfit text-black"
-                href = "/projects/roblox-game/page.js">
+                href = "/projects/roblox-game/">
                 </ProjectButton>
+                <div className = "p-3"></div>
+
+                <ProjectButton 
+                iconPath = "/icons/roblox.png" 
+                text = "Deltahacks 2025: Gesture Controlled Passcode"
+                textClassName = "text-2x1 font-bold font-outfit text-black"
+                href = "/projects/deltahacks-2025/">
+                </ProjectButton>
+
             </div>
 
             <Header className = "text-3xl font-bold font-outfit pt-10 pb-2">Relevant Courses</Header>
