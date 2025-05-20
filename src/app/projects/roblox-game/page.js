@@ -1,5 +1,5 @@
 import Header from '@/components/header.js';
-import Tag from '@/components/tag.js'
+import Tag from '@/components/tag.js';
 
 export default function RobloxGamePage() {
   return (
@@ -38,7 +38,7 @@ export default function RobloxGamePage() {
       <video autoPlay muted loop width="w-fill" height="240" controls preload="auto">
         <source src="/videos/roblox-project-video.mp4" type="video/mp4" />
 
-        Your browser does not support the video tag.
+        Your browser does not support playback of this video.
       </video>
 
     </div>
