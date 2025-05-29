@@ -1,10 +1,8 @@
 import Header from "@/components/header.js";
-import Typewriter from "@/components/typewriter.js"
-import HoverButton from "@/components/hoverbutton.js"
+import Typewriter from "@/components/typewriter.js";
+import HoverButton from "@/components/hoverbutton.js";
 import ProjectButton from "@/components/projectbutton.js";
-
-// Notes on Tailwind
-// pt-25 means top padding, pb-0 means bottom padding
+import Button from "@/components/button.js";
 
 const welcomeParagraph = `Hello and welcome to my portfolio. I am a second year Computer Engineering student at McMaster University. 
 My primary interests in ECE are in embedded systems, both low and high level programming, and PCB design, to name a few. My projects, 
@@ -30,14 +28,19 @@ const courses = [
     "ELECENG 2CI4 - Introduction to Electrical Engineering",
     "ELECENG 2CF3 - Circuits and Waves",
     "ELECENG 2EI4 - Electronic Devices and Circuits I"
-]
+];
 
 export default function Home() {
     return (
         
         <div className = "max-w-3xl mx-auto px-4">
-            
+            <div className = "flex flex-row">
+
             <Typewriter className = "text-5xl font-bold font-outfit pt-25 pb-0">Omar Arshad</Typewriter>
+            <Button iconPath = "/icons/github.png" alt="GitHub Icon" href="https://github.com/oarshad53/"></Button>
+
+            </div>
+            
             <p className = "font-outfit text-lg pt-10 pb-0">{welcomeParagraph}</p>
 
             <Header className = "text-3xl font-bold font-outfit pt-10 pb-5">Skills and Technologies</Header>
@@ -67,8 +70,8 @@ export default function Home() {
                 <div className = "p-3"></div>
 
                 <ProjectButton 
-                iconPath = "/icons/roblox.png" 
-                text = "Deltahacks 2025: Gesture Controlled Passcode"
+                iconPath = "/icons/deltahacks.png" 
+                text = "Deltahacks 2025: Gesture Controlled Passcode System"
                 textClassName = "text-2x1 font-bold font-outfit text-black"
                 href = "/projects/deltahacks-2025/">
                 </ProjectButton>
