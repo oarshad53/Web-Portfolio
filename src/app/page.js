@@ -2,7 +2,7 @@ import Header from "@/components/header.js";
 import Typewriter from "@/components/typewriter.js";
 import HoverButton from "@/components/hoverbutton.js";
 import ProjectButton from "@/components/projectbutton.js";
-import Button from "@/components/button.js";
+import GitHubButton from "@/components/githubbutton.js";
 
 const welcomeParagraph = `Hello and welcome to my portfolio. I am a second year Computer Engineering student at McMaster University. 
 My primary interests in ECE are in embedded systems, both low and high level programming, and PCB design, to name a few. My projects, 
@@ -34,12 +34,8 @@ export default function Home() {
     return (
         
         <div className = "max-w-3xl mx-auto px-4">
-            <div className = "flex flex-row">
 
             <Typewriter className = "text-5xl font-bold font-outfit pt-25 pb-0">Omar Arshad</Typewriter>
-            <Button iconPath = "/icons/github.png" alt="GitHub Icon" href="https://github.com/oarshad53/"></Button>
-
-            </div>
             
             <p className = "font-outfit text-lg pt-10 pb-0">{welcomeParagraph}</p>
 
@@ -85,6 +81,10 @@ export default function Home() {
                         return <li className = "font-outfit text-lg" key={index}>{course}</li>
                     })}
                 </ul>
+            </div>
+
+            <div className = "flex flex-row pt-10 pb-5">
+                 <GitHubButton iconPath = "/icons/github.png" alt="GitHub Icon" href="https://github.com/oarshad53/"></GitHubButton>
             </div>
 
         </div>
