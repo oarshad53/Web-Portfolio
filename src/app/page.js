@@ -83,7 +83,7 @@ export default function Home() {
                 </ul>
             </div>
 
-            <div className = "flex flex-row pt-10 pb-5">
+            <div className = "flex justify-center pt-10 pb-5">
                  <GitHubButton iconPath = "/icons/github.png" alt="GitHub Icon" href="https://github.com/oarshad53/"></GitHubButton>
             </div>
 
