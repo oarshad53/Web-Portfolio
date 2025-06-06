@@ -18,4 +18,3 @@ export default function HoverButton ( { iconPath, text, textClassName, className
     );
 
 }
-//`w-50 h-30 rounded-xl border relative overflow-hidden group flex items-center justify-center bg-white ${className}`
